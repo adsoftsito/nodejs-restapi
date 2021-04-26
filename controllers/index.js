@@ -16,14 +16,6 @@ const getAllUsers = async (req, res) => {
   try {
     const users = await models.User.findAll({
       include: [
-        /*{
-          model: models.Comment,
-          as: "comments"
-        },
-        {
-          model: models.User,
-          as: "author"
-        }*/
       ]
     });
     return res.status(200).json({ users });
@@ -35,7 +27,4 @@ const getAllUsers = async (req, res) => {
 module.exports = {
   createUser,
   getAllUsers
- // getPostById,
- // updatePost,
- // deletePost
 };

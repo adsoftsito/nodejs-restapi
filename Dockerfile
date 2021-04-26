@@ -10,8 +10,8 @@ RUN apt-get install -y nodejs
 ADD package.json /package.json
 RUN npm install
 
-WORKDIR /
+WORKDIR /src
 
 EXPOSE 8085
 
-CMD ["node", "index.js"]
+CMD ["node", "/src/index.js"]
